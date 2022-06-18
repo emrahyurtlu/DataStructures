@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1703.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datastructures", "Datastructures.csproj", "{E87E26B3-24D6-489C-8877-C061FE927E8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList.Test", "LinkedList.Test\LinkedList.Test.csproj", "{ADA24042-914E-451C-B0BC-65956E6D8B7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{8094CDC3-829B-4166-88CC-802E3EFB146B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E87E26B3-24D6-489C-8877-C061FE927E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E87E26B3-24D6-489C-8877-C061FE927E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E87E26B3-24D6-489C-8877-C061FE927E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E87E26B3-24D6-489C-8877-C061FE927E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA24042-914E-451C-B0BC-65956E6D8B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA24042-914E-451C-B0BC-65956E6D8B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA24042-914E-451C-B0BC-65956E6D8B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA24042-914E-451C-B0BC-65956E6D8B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8094CDC3-829B-4166-88CC-802E3EFB146B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8094CDC3-829B-4166-88CC-802E3EFB146B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8094CDC3-829B-4166-88CC-802E3EFB146B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8094CDC3-829B-4166-88CC-802E3EFB146B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

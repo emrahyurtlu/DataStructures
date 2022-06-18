@@ -1,12 +1,12 @@
 ﻿namespace LinkedList.Test;
 
 using LinkedList;
-public class SinglyLinkedListTest
+public class DoublyLinkedListTest
 {
     [Fact]
     public void TestLinkedListIsNull()
     {
-        var linkedList = new SinglyLinkedList<int>();
+        var linkedList = new DoublyLinkList<int>();
         Assert.True(linkedList.IsEmpty());
     }
 
@@ -16,7 +16,7 @@ public class SinglyLinkedListTest
     [InlineData(5)]
     public void TheoryAddFirstNewInteger(int number)
     {
-        var linkedList = new SinglyLinkedList<int>();
+        var linkedList = new DoublyLinkList<int>();
         linkedList.AddFirst(number);
 
         Assert.IsType<Node<int>>(linkedList.Has(number));
@@ -29,7 +29,7 @@ public class SinglyLinkedListTest
     [InlineData(5)]
     public void TheoryAddLastNewInteger(int number)
     {
-        var linkedList = new SinglyLinkedList<int>();
+        var linkedList = new DoublyLinkList<int>();
         linkedList.AddLast(number);
 
         Assert.IsType<Node<int>>(linkedList.Has(number));
@@ -38,7 +38,7 @@ public class SinglyLinkedListTest
     [Fact]
     public void TestHasNotThree()
     {
-        var linkedList = new SinglyLinkedList<int>();
+        var linkedList = new DoublyLinkList<int>();
 
         linkedList.AddLast(1);
         Assert.Equal(1, linkedList.Length());
@@ -56,5 +56,21 @@ public class SinglyLinkedListTest
         Assert.Equal(3, linkedList.Length());
 
         Assert.IsNotType<Node<int>>(linkedList.Has(3));
+    }
+
+    [Fact]
+    public void TextPrev1AndNext3()
+    {
+        var linkedList = new DoublyLinkList<int>();
+
+        linkedList.AddLast(1);
+        linkedList.AddLast(2);
+        linkedList.AddLast(3);
+        Assert.Equal(3, linkedList.Length());
+
+        var node = linkedList.Has(2);
+
+        Assert.Equal(1, node.Prev.Data);
+        Assert.Equal(3, node.Next.Data);
     }
 }
