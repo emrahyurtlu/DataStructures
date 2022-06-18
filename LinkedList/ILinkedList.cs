@@ -7,7 +7,7 @@ namespace LinkedList
 
         void AddLast(T element);
 
-        void Remove(T element);
+        T Remove(T element);
 
         int Length();
 

@@ -57,12 +57,11 @@ namespace LinkedList
             Elements.Add(element);
         }
 
-        public void Remove(T element)
+        public T Remove(T element)
         {
+            T removedElement = default;
             if (_head is null)
-            {
-                return;
-            }
+                throw new EmptyLinkedListException();
 
             if (_head.Data.Equals(element))
             {
@@ -78,10 +77,13 @@ namespace LinkedList
                         node.Next.Prev = node.Prev;
                         _count--;
                         Elements.Remove(element);
+                        removedElement = element;
                         break;
                     }
                 }
             }
+
+            return removedElement;
         }
 
         public int Length() => _count;

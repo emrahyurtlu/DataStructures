@@ -67,33 +67,26 @@ namespace LinkedList
             }
         }
 
-        public void Remove(T element)
+        public T Remove(T element)
         {
             if (_head is null)
+                throw new EmptyLinkedListException();
+
+            Node<T> prev = null;
+            for (Node<T> node = _head; node != null; node = node.Next)
             {
-                return;
+                if (node.Data != null && node.Data.Equals(element))
+                {
+                    if (prev == null) _head = node.Next;
+                    else prev.Next = node.Next;
+                    _count--;
+                    Elements.Remove(element);
+                    return node.Data;
+                }
+                prev = node;
             }
 
-            if (_head.Data.Equals(element))
-            {
-                _head = _head.Next;
-            }
-            else
-            {
-                Node<T> prev = null;
-                for (Node<T> node = _head; node != null; node = node.Next)
-                {
-                    if (node.Data != null && node.Data.Equals(element))
-                    {
-                        if (prev == null) _head = node.Next;
-                        else prev.Next = node.Next;
-                        _count--;
-                        Elements.Remove(element);
-                        break;
-                    }
-                    prev = node;
-                }
-            }
+            return default;
         }
 
         public T Tail() => _tail.Data;
