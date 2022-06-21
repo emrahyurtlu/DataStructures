@@ -19,7 +19,9 @@ public class SinglyLinkedListTest
         var linkedList = new SinglyLinkedList<int>();
         linkedList.AddFirst(number);
 
-        Assert.IsType<Node<int>>(linkedList.Has(number));
+        linkedList.Has(number);
+
+        Assert.IsType<SinglyNode<int>>(linkedList.Has(number));
     }
 
 
@@ -32,7 +34,7 @@ public class SinglyLinkedListTest
         var linkedList = new SinglyLinkedList<int>();
         linkedList.AddLast(number);
 
-        Assert.IsType<Node<int>>(linkedList.Has(number));
+        Assert.IsType<SinglyNode<int>>(linkedList.Has(number));
     }
 
     [Fact]
@@ -55,6 +57,6 @@ public class SinglyLinkedListTest
         linkedList.Remove(3);
         Assert.Equal(3, linkedList.Length());
 
-        Assert.IsNotType<Node<int>>(linkedList.Has(3));
+        Assert.IsNotType<SinglyNode<int>>(linkedList.Has(3));
     }
 }

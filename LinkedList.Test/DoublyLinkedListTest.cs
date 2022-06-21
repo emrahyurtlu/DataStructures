@@ -19,7 +19,7 @@ public class DoublyLinkedListTest
         var linkedList = new DoublyLinkList<int>();
         linkedList.AddFirst(number);
 
-        Assert.IsType<Node<int>>(linkedList.Has(number));
+        Assert.IsType<DoublyNode<int>>(linkedList.Has(number));
     }
 
 
@@ -32,7 +32,7 @@ public class DoublyLinkedListTest
         var linkedList = new DoublyLinkList<int>();
         linkedList.AddLast(number);
 
-        Assert.IsType<Node<int>>(linkedList.Has(number));
+        Assert.IsType<DoublyNode<int>>(linkedList.Has(number));
     }
 
     [Fact]
@@ -55,7 +55,7 @@ public class DoublyLinkedListTest
         linkedList.Remove(3);
         Assert.Equal(3, linkedList.Length());
 
-        Assert.IsNotType<Node<int>>(linkedList.Has(3));
+        Assert.IsNotType<DoublyNode<int>>(linkedList.Has(3));
     }
 
     [Fact]

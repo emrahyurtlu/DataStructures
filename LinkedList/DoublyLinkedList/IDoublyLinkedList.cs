@@ -1,7 +1,7 @@
 ﻿using System;
 namespace LinkedList
 {
-    public interface ILinkedList<T>
+    public interface IDoublyLinkedList<T>
     {
         void AddFirst(T element);
 
@@ -9,19 +9,20 @@ namespace LinkedList
 
         T Remove(T element);
 
+        void RemoveAll();
+
         int Length();
 
         bool IsEmpty();
 
-        Node<T>? Has(T element);
+        DoublyNode<T>? Has(T element);
 
         List<T> ToList();
 
-        T Head();
+        DoublyNode<T> Head();
 
-        T Tail();
+        DoublyNode<T> Tail();
 
         void Print();
     }
 }
-

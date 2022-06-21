@@ -1,12 +1,12 @@
 ﻿using System;
 namespace LinkedList
 {
-    public class DoublyLinkList<T> : ILinkedList<T>
+    public class DoublyLinkList<T> : IDoublyLinkedList<T>
     {
 
-        private Node<T> _head = null;
+        private DoublyNode<T> _head = null;
 
-        private Node<T> _tail = null;
+        private DoublyNode<T> _tail = null;
 
         private int _count = 0;
 
@@ -19,7 +19,7 @@ namespace LinkedList
 
         public void AddFirst(T element)
         {
-            var node = new Node<T>(element);
+            var node = new DoublyNode<T>(element);
 
             if (_head is null)
             {
@@ -39,7 +39,7 @@ namespace LinkedList
 
         public void AddLast(T element)
         {
-            var node = new Node<T>(element);
+            var node = new DoublyNode<T>(element);
 
             if (_tail is null)
             {
@@ -69,7 +69,7 @@ namespace LinkedList
             }
             else
             {
-                for (Node<T> node = _head.Next; node != null; node = node.Next)
+                for (DoublyNode<T> node = _head.Next; node != null; node = node.Next)
                 {
                     if (node.Data.Equals(element))
                     {
@@ -86,11 +86,22 @@ namespace LinkedList
             return removedElement;
         }
 
+        public void RemoveAll()
+        {
+            if (_head is null)
+                throw new EmptyLinkedListException();
+
+            for (var node = _head; node != null; node = node.Next)
+            {
+                Remove(node.Data);
+            }
+        }
+
         public int Length() => _count;
 
         public bool IsEmpty() => _count == 0;
 
-        public Node<T>? Has(T element)
+        public DoublyNode<T>? Has(T element)
         {
             for (var node = _head; node != null; node = node.Next)
             {
@@ -105,9 +116,9 @@ namespace LinkedList
 
         public List<T> ToList() => Elements;
 
-        public T Head() => _head.Data;
+        public DoublyNode<T> Head() => _head;
 
-        public T Tail() => _tail.Data;
+        public DoublyNode<T> Tail() => _tail;
 
         public void Print()
         {

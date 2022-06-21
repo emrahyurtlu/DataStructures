@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="DoublyLinkedList\" />
+    <None Remove="SinglyLinkedList\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DoublyLinkedList\" />
+    <Folder Include="SinglyLinkedList\" />
+  </ItemGroup>
 </Project>

@@ -17,12 +17,12 @@ namespace Stack
             if (size == 0)
                 throw new EmptyStackException();
 
-            return linkedList.Tail();
+            return linkedList.Tail().Data;
         }
 
         public T Pop()
         {
-            return linkedList.Remove(linkedList.Tail());
+            return linkedList.Remove(linkedList.Tail().Data);
         }
 
         public void Push(T element)
