@@ -38,7 +38,7 @@ namespace Stack
         {
             if (size == arr.Length)
             {
-                Resize();
+                Enlarge();
             }
 
             arr[size++] = element;
@@ -46,7 +46,7 @@ namespace Stack
 
         public int Size() => size;
 
-        private void Resize()
+        private void Enlarge()
         {
             capacity = size * 2;
             Array.Resize<T>(ref arr, capacity);
