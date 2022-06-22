@@ -1,36 +1,37 @@
-﻿using System;
-using LinkedList;
-namespace Stack
+﻿using LinkedList.SinglyLinkedList;
+
+namespace Stack;
+
+public class LinkedStack<T> : IStack<T>
 {
-	public class LinkedStack<T> : IStack<T>
-	{
-        private SinglyLinkedList<T> linkedList;
-        private int size = 0;
+    private readonly SinglyLinkedList<T> _linkedList;
+    private readonly int _size = 0;
 
-        public LinkedStack()
-        {
-            linkedList = new SinglyLinkedList<T>();
-        }
+    public LinkedStack()
+    {
+        _linkedList = new SinglyLinkedList<T>();
+    }
 
-        public T Peek()
-        {
-            if (size == 0)
-                throw new EmptyStackException();
+    public T Peek()
+    {
+        if (_size == 0)
+            throw new EmptyStackException();
 
-            return linkedList.Tail().Data;
-        }
+        return _linkedList.Tail().Data;
+    }
 
-        public T Pop()
-        {
-            return linkedList.Remove(linkedList.Tail().Data);
-        }
+    public T Pop()
+    {
+        return _linkedList.Remove(_linkedList.Tail().Data);
+    }
 
-        public void Push(T element)
-        {
-            linkedList.AddLast(element);
-        }
+    public void Push(T element)
+    {
+        _linkedList.AddLast(element);
+    }
 
-        public int Size() => size;
+    public int Size()
+    {
+        return _size;
     }
 }
-

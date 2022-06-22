@@ -1,49 +1,54 @@
-﻿using System;
-using LinkedList;
-namespace Queue
+﻿using LinkedList.SinglyLinkedList;
+
+namespace Queue;
+
+public class LinkedQueue<T> : IQueue<T>
 {
-	public class LinkedQueue<T> : IQueue<T>
-	{
-        private SinglyLinkedList<T> linkedList;
+    private readonly SinglyLinkedList<T> _linkedList;
 
-        private int size = 0;
+    private int _size;
 
-        public LinkedQueue()
-		{
-            linkedList = new SinglyLinkedList<T>();
-		}
+    public LinkedQueue()
+    {
+        _linkedList = new SinglyLinkedList<T>();
+        _size = 0;
+    }
 
-        public void Clear()
-        {
-            if (size == 0)
-            {
-                throw new EmptyQueueException();
-            }
+    public void Clear()
+    {
+        if (_size == 0) throw new EmptyQueueException();
 
-            linkedList.RemoveAll();
-            
-            size = 0;
-        }
+        _linkedList.RemoveAll();
 
-        public bool Contains(T element) => linkedList.Has(element) is not null;
+        _size = 0;
+    }
 
-        public T Dequeue()
-        {
-            var value = linkedList.Head().Data;
-            linkedList.Remove(linkedList.Head().Data);
+    public bool Contains(T element)
+    {
+        return _linkedList.Contains(element) is not null;
+    }
 
-            return value;
-        }
+    public T Dequeue()
+    {
+        var value = _linkedList.Head().Data;
+        _linkedList.Remove(_linkedList.Head().Data);
+        _size--;
+        return value;
+    }
 
-        public void Enqueue(T element)
-        {
-            linkedList.AddLast(element);
-            size++;
-        }
+    public void Enqueue(T element)
+    {
+        _linkedList.AddLast(element);
+        _size++;
+    }
 
-        public T Peek() => linkedList.Head().Data;
+    public T Peek()
+    {
+        return _linkedList.Head().Data;
+    }
 
-        public int Size() => size;
+    public int Size()
+    {
+        return _size;
     }
 }
-

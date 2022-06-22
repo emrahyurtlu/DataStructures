@@ -1,5 +1,4 @@
-﻿using System;
-namespace LinkedList
+﻿namespace LinkedList.DoublyLinkedList
 {
     public interface IDoublyLinkedList<T>
     {

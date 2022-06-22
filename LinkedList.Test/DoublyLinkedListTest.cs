@@ -1,4 +1,6 @@
-﻿namespace LinkedList.Test;
+﻿using LinkedList.DoublyLinkedList;
+
+namespace LinkedList.Test;
 
 using LinkedList;
 public class DoublyLinkedListTest

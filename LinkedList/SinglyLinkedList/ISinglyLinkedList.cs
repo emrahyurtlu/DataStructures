@@ -1,28 +1,26 @@
-﻿using System;
-namespace LinkedList
+﻿namespace LinkedList.SinglyLinkedList;
+
+public interface ISinglyLinkedList<T>
 {
-    public interface ISinglyLinkedList<T>
-    {
-        void AddFirst(T element);
+    void AddFirst(T element);
 
-        void AddLast(T element);
+    void AddLast(T element);
 
-        T Remove(T element);
+    T Remove(T element);
 
-        void RemoveAll();
+    void RemoveAll();
 
-        int Length();
+    int Length();
 
-        bool IsEmpty();
+    bool IsEmpty();
 
-        SinglyNode<T>? Has(T element);
+    SinglyNode<T>? Contains(T element);
 
-        List<T> ToList();
+    List<T> ToList();
 
-        SinglyNode<T> Head();
+    SinglyNode<T> Head();
 
-        SinglyNode<T> Tail();
+    SinglyNode<T> Tail();
 
-        void Print();
-    }
+    void Print();
 }

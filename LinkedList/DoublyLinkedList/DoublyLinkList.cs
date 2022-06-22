@@ -1,14 +1,13 @@
-﻿using System;
-namespace LinkedList
+﻿namespace LinkedList.DoublyLinkedList
 {
     public class DoublyLinkList<T> : IDoublyLinkedList<T>
     {
 
-        private DoublyNode<T> _head = null;
+        private DoublyNode<T> _head;
 
-        private DoublyNode<T> _tail = null;
+        private DoublyNode<T> _tail;
 
-        private int _count = 0;
+        private int _count;
 
         private List<T> Elements { get; set; }
 

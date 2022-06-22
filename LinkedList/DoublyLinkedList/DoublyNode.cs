@@ -1,4 +1,4 @@
-﻿namespace LinkedList
+﻿namespace LinkedList.DoublyLinkedList
 {
     public class DoublyNode<T>
     {
@@ -14,4 +14,3 @@
         }
     }
 }
-
