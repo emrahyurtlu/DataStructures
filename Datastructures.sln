@@ -1,19 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1703.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList.Tests", "LinkedList.Test\LinkedList.Tests.csproj", "{ADA24042-914E-451C-B0BC-65956E6D8B7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList.Tests", "LinkedList.Test\LinkedList.Tests.csproj", "{ADA24042-914E-451C-B0BC-65956E6D8B7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{8094CDC3-829B-4166-88CC-802E3EFB146B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\LinkedList.csproj", "{8094CDC3-829B-4166-88CC-802E3EFB146B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{84F401AB-704D-458A-9FA0-38C552579D28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack", "Stack\Stack.csproj", "{84F401AB-704D-458A-9FA0-38C552579D28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack.Tests", "Stack.Tests\Stack.Tests.csproj", "{C94B1E85-1481-4865-97C8-997A1E84DB34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack.Tests", "Stack.Tests\Stack.Tests.csproj", "{C94B1E85-1481-4865-97C8-997A1E84DB34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{27AD57AE-3C25-49EA-9E6B-AA63E8A9F834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queue", "Queue\Queue.csproj", "{27AD57AE-3C25-49EA-9E6B-AA63E8A9F834}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue.Tests", "Queue.Tests\Queue.Tests.csproj", "{061C67B8-31A6-48A5-AD8D-9A03E26EC57F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queue.Tests", "Queue.Tests\Queue.Tests.csproj", "{061C67B8-31A6-48A5-AD8D-9A03E26EC57F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursion", "Recursion\Recursion.csproj", "{5CBC9A87-641B-4365-A497-1E63C90B6234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursion.Tests", "Recursion.Tests\Recursion.Tests.csproj", "{E25A90E9-8676-46FB-BEF0-389AF1B7F3B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{061C67B8-31A6-48A5-AD8D-9A03E26EC57F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{061C67B8-31A6-48A5-AD8D-9A03E26EC57F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{061C67B8-31A6-48A5-AD8D-9A03E26EC57F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CBC9A87-641B-4365-A497-1E63C90B6234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBC9A87-641B-4365-A497-1E63C90B6234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBC9A87-641B-4365-A497-1E63C90B6234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBC9A87-641B-4365-A497-1E63C90B6234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25A90E9-8676-46FB-BEF0-389AF1B7F3B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25A90E9-8676-46FB-BEF0-389AF1B7F3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25A90E9-8676-46FB-BEF0-389AF1B7F3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25A90E9-8676-46FB-BEF0-389AF1B7F3B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
