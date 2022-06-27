@@ -24,6 +24,6 @@ public class HanoiTowerTest
         hanoi.Print(1, 'A', 'B', 'C');
 
         // Assert
-        Assert.Equal(expected, stringWriter.ToString());
+        Assert.Equal(expected, stringWriter.ToString().Trim());
     }
 }
