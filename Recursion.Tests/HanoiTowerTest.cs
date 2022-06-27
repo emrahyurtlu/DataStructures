@@ -14,11 +14,16 @@ public class HanoiTowerTest
     [Fact]
     public void TestOneWithABC()
     {
+        // Arrange
         var hanoi = new TowersOfHanoi();
-        hanoi.Print(1, 'A', 'B', 'C');
         var expected = "A --> B";
-        // _output.WriteLine(expected);
+        var stringWriter = new StringWriter();
+        Console.SetOut(stringWriter);
+        
+        // Act
+        hanoi.Print(1, 'A', 'B', 'C');
 
-        Assert.True(false);
+        // Assert
+        Assert.Equal(expected, stringWriter.ToString());
     }
 }
