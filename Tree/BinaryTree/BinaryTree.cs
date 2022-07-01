@@ -30,8 +30,19 @@ public class BinaryTree<T> : IBinaryTree<T>
         throw new NotImplementedException();
     }
 
-    public BinaryNode<T> Search(T value)
+    public BinaryNode<T> DepthFirstSearch(T value)
     {
+        /*
+         For Iterative Solution:
+         Searching function should be implemented by using stack data structure.
+         First we should add all nodes into the stack and than use it by popping 
+         from stack.
+         Complexity: O(n);
+         
+         For Recursive Solution:
+         
+         */
+        
         throw new NotImplementedException();
     }
 
@@ -45,10 +56,7 @@ public class BinaryTree<T> : IBinaryTree<T>
         throw new NotImplementedException();
     }
 
-    public int Size()
-    {
-        throw new NotImplementedException();
-    }
+    public int Size() => _size;
 
     public bool IsLeaf()
     {
@@ -64,4 +72,6 @@ public class BinaryTree<T> : IBinaryTree<T>
     {
         throw new NotImplementedException();
     }
+
+    public BinaryNode<T> GetRoot() => _rootNode;
 }

@@ -7,7 +7,7 @@ public interface IBinaryTree<T>
 
     void Remove(T value);
 
-    BinaryNode<T> Search(T value);
+    BinaryNode<T> DepthFirstSearch(T value);
 
     int Height();
 
@@ -20,4 +20,6 @@ public interface IBinaryTree<T>
     int NumberOfLeaves();
 
     bool Contains(T value);
+    
+    BinaryNode<T> GetRoot();
 }

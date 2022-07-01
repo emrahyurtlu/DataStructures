@@ -9,6 +9,8 @@ public class BinaryNode<T>
 
     public T? Data { get; set; }
 
+    public BinaryNode<T> Root { get; set; }
+    
     public BinaryNode<T> Right { get; set; }
 
     public BinaryNode<T> Left { get; set; }
