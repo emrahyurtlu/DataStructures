@@ -21,7 +21,7 @@ public class ArrayStackTest
         var stack = new ArrayStack<int>(4);
 
         stack.Push(number);
-        Array.Equals(number, stack.Peek());
+        Equals(number, stack.Peek());
     }
 
     [Fact]

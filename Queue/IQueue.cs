@@ -1,4 +1,5 @@
 ﻿namespace Queue;
+
 public interface IQueue<T>
 {
     void Enqueue(T element);
@@ -13,4 +14,3 @@ public interface IQueue<T>
 
     void Clear();
 }
-

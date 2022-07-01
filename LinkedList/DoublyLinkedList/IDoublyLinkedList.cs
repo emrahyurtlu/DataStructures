@@ -1,27 +1,26 @@
-﻿namespace LinkedList.DoublyLinkedList
+﻿namespace LinkedList.DoublyLinkedList;
+
+public interface IDoublyLinkedList<T>
 {
-    public interface IDoublyLinkedList<T>
-    {
-        void AddFirst(T element);
+    void AddFirst(T element);
 
-        void AddLast(T element);
+    void AddLast(T element);
 
-        T Remove(T element);
+    T Remove(T element);
 
-        void RemoveAll();
+    void RemoveAll();
 
-        int Length();
+    int Length();
 
-        bool IsEmpty();
+    bool IsEmpty();
 
-        DoublyNode<T>? Has(T element);
+    DoublyNode<T>? Has(T element);
 
-        List<T> ToList();
+    List<T> ToList();
 
-        DoublyNode<T> Head();
+    DoublyNode<T> Head();
 
-        DoublyNode<T> Tail();
+    DoublyNode<T> Tail();
 
-        void Print();
-    }
+    void Print();
 }

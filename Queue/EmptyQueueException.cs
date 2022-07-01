@@ -1,11 +1,8 @@
-﻿using System;
-namespace Queue
+﻿namespace Queue;
+
+public class EmptyQueueException : Exception
 {
-    public class EmptyQueueException : Exception
+    public EmptyQueueException() : base("Queue is empty!")
     {
-        public EmptyQueueException() : base("Queue is empty!")
-        {
-        }
     }
 }
-

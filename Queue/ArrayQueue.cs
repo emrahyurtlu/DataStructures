@@ -1,75 +1,72 @@
-﻿using System;
-namespace Queue
+﻿namespace Queue;
+
+public class ArrayQueue<T> : IQueue<T>
 {
-    public class ArrayQueue<T> : IQueue<T>
+    /// <summary>
+    ///     arr holds the data of the queue
+    /// </summary>
+    private T[] arr;
+
+    /// <summary>
+    ///     capacity is related for the queue length whether indices are full or empty
+    /// </summary>
+    private int capacity;
+
+    /// <summary>
+    ///     indicator is used to enqueue of the current element.
+    /// </summary>
+    private int indicator;
+
+    /// <summary>
+    ///     size is used for the quantity of the elements in the queue
+    /// </summary>
+    private int size;
+
+    public ArrayQueue(int capacity = 100)
     {
-        /// <summary>
-        /// arr holds the data of the queue
-        /// </summary>
-        private T[] arr;
+        this.capacity = capacity;
+        arr = new T[capacity];
+    }
 
-        /// <summary>
-        /// indicator is used to enqueue of the current element.
-        /// </summary>
-        private int indicator = 0;
+    public void Clear()
+    {
+        if (size == 0) throw new EmptyQueueException();
 
-        /// <summary>
-        /// size is used for the quantity of the elements in the queue
-        /// </summary>
-        private int size = 0;
+        Array.Clear(arr);
+        size = indicator = 0;
+    }
 
-        /// <summary>
-        /// capacity is related for the queue length whether indices are full or empty
-        /// </summary>
-        private int capacity;
+    public bool Contains(T element)
+    {
+        return arr.Contains(element);
+    }
 
-        public ArrayQueue(int capacity = 100)
-        {
-            this.capacity = capacity;
-            arr = new T[capacity];
-        }
+    public T Dequeue()
+    {
+        size--;
+        return arr[indicator++];
+    }
 
-        public void Clear()
-        {
-            if (size == 0)
-            {
-                throw new EmptyQueueException();
-            }
+    public void Enqueue(T element)
+    {
+        if (size == capacity) Enlarge();
 
-            Array.Clear(arr);
-            size = indicator = 0;
-        }
+        arr[size++] = element;
+    }
 
-        public bool Contains(T element)
-        {
-            return arr.Contains<T>(element);
-        }
+    public T Peek()
+    {
+        return arr[indicator];
+    }
 
-        public T Dequeue()
-        {
-            size--;
-            return arr[indicator++];
-        }
+    public int Size()
+    {
+        return size;
+    }
 
-        public void Enqueue(T element)
-        {
-            if (size == capacity)
-            {
-                Enlarge();
-            }
-
-            arr[size++] = element;
-        }
-
-        private void Enlarge()
-        {
-            capacity *= 2;
-            Array.Resize<T>(ref arr, capacity);
-        }
-
-        public T Peek() => arr[indicator];
-
-        public int Size() => size;
+    private void Enlarge()
+    {
+        capacity *= 2;
+        Array.Resize(ref arr, capacity);
     }
 }
-

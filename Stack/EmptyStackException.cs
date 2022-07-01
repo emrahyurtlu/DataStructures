@@ -1,11 +1,8 @@
-﻿using System;
-namespace Stack
+﻿namespace Stack;
+
+public class EmptyStackException : Exception
 {
-	public class EmptyStackException: Exception
-	{
-		public EmptyStackException(): base("Stack is empty!")
-		{
-		}
+    public EmptyStackException() : base("Stack is empty!")
+    {
     }
 }
-

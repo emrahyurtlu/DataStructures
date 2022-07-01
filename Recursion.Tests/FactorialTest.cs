@@ -1,38 +1,37 @@
-namespace Recursion.Tests
+namespace Recursion.Tests;
+
+public class FactorialTest
 {
-    public class FactorialTest
+    [Fact]
+    public void CalculateZeroFactorial()
     {
-        [Fact]
-        public void CalculateZeroFactorial()
-        {
-            var fact = new Factorial();
+        var fact = new Factorial();
 
-            var expected = 1;
-            var actual = fact.CalcFactorial(0);
+        var expected = 1;
+        var actual = fact.CalcFactorial(0);
 
-            Assert.Equal(expected, actual);
-        }
+        Assert.Equal(expected, actual);
+    }
 
-        [Fact]
-        public void CalculateMinusValueFactorial()
-        {
-            var fact = new Factorial();
+    [Fact]
+    public void CalculateMinusValueFactorial()
+    {
+        var fact = new Factorial();
 
-            var expected = 1;
-            var actual = fact.CalcFactorial(-1);
+        var expected = 1;
+        var actual = fact.CalcFactorial(-1);
 
-            Assert.Equal(expected, actual);
-        }
-        
-        [Fact]
-        public void CalculateFiveFactorial()
-        {
-            var fact = new Factorial();
+        Assert.Equal(expected, actual);
+    }
 
-            var expected = 120;
-            var actual = fact.CalcFactorial(5);
+    [Fact]
+    public void CalculateFiveFactorial()
+    {
+        var fact = new Factorial();
 
-            Assert.Equal(expected, actual);
-        }
+        var expected = 120;
+        var actual = fact.CalcFactorial(5);
+
+        Assert.Equal(expected, actual);
     }
 }

@@ -2,7 +2,6 @@
 
 namespace LinkedList.Test;
 
-using LinkedList;
 public class DoublyLinkedListTest
 {
     [Fact]

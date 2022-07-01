@@ -19,7 +19,7 @@ public class HanoiTowerTest
         var expected = "A --> B";
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
-        
+
         // Act
         hanoi.Print(1, 'A', 'B', 'C');
 

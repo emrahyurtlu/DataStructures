@@ -2,11 +2,10 @@
 
 public class SinglyLinkedList<T> : ISinglyLinkedList<T>
 {
+    private int _count;
     private SinglyNode<T> _head;
 
     private SinglyNode<T> _tail;
-
-    private int _count;
 
     public SinglyLinkedList()
     {

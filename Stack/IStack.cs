@@ -1,4 +1,5 @@
 ﻿namespace Stack;
+
 public interface IStack<T>
 {
     T Peek();
@@ -9,4 +10,3 @@ public interface IStack<T>
 
     int Size();
 }
-

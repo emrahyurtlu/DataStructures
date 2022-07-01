@@ -1,56 +1,56 @@
-﻿using System;
-namespace Stack
+﻿namespace Stack;
+
+public class ArrayStack<T> : IStack<T>
 {
-    public class ArrayStack<T> : IStack<T>
+    private T[] arr;
+    private int capacity;
+    private int size;
+
+    public ArrayStack(int capacity = 100)
     {
-        private T[] arr;
-        private int size = 0;
-        private int capacity = 0;
+        this.capacity = capacity;
+        arr = new T[capacity];
+    }
 
-        public ArrayStack(int capacity = 100)
-        {
-            this.capacity = capacity;
-            arr = new T[capacity];
-        }
+    public T Peek()
+    {
+        if (size == 0)
+            throw new EmptyStackException();
 
-        public int Capacity() => capacity;
+        return arr[size - 1];
+    }
 
-        public T Peek()
-        {
-            if (size == 0)
-                throw new EmptyStackException();
+    public T Pop()
+    {
+        if (size == 0)
+            throw new EmptyStackException();
 
-            return arr[size - 1];
-        }
+        var element = arr[--size];
+        arr[size] = default;
 
-        public T Pop()
-        {
-            if (size == 0)
-                throw new EmptyStackException();
+        return element;
+    }
 
-            var element = arr[--size];
-            arr[size] = default;
+    public void Push(T element)
+    {
+        if (size == arr.Length) Enlarge();
 
-            return element;
-        }
+        arr[size++] = element;
+    }
 
-        public void Push(T element)
-        {
-            if (size == arr.Length)
-            {
-                Enlarge();
-            }
+    public int Size()
+    {
+        return size;
+    }
 
-            arr[size++] = element;
-        }
+    public int Capacity()
+    {
+        return capacity;
+    }
 
-        public int Size() => size;
-
-        private void Enlarge()
-        {
-            capacity = size * 2;
-            Array.Resize<T>(ref arr, capacity);
-        }
+    private void Enlarge()
+    {
+        capacity = size * 2;
+        Array.Resize(ref arr, capacity);
     }
 }
-
