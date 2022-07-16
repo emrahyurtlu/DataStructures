@@ -3,6 +3,7 @@
 public interface IBinaryTree<T>
 {
     T AddLeft(T value);
+
     T AddRight(T value);
 
     void Remove(T value);
@@ -19,7 +20,17 @@ public interface IBinaryTree<T>
 
     int NumberOfLeaves();
 
+    int NumberOfEdges();
+
     bool Contains(T value);
+
+    bool IsFull();
+
+    bool IsComplete();
+
+    bool IsPerfect();
+
+    bool IsBalanced();
     
     BinaryNode<T> GetRoot();
 }
